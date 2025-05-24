@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Frontend Mentor | Conference ticket generator">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Conference ticket generator</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-container">
+      <a href="" class="logo-link">
+        <img src="assets/images/logo-full.svg" alt="Coding Conf Logo" draggable="false">
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="hero-container">
+        <h1 class="hero-title">Your Journey to Coding Conf 2025 Starts Here!</h1>
+        <p class="hero-desc">Secure your spot at next year's biggest coding conference.</p>
+
+        <form class="ticket-form">
+          <div class="form-group upload-group">
+            <label for="upload-img" class="form-label">Upload Avatar</label>
+
+            <div class="upload-box">
+              <label class="upload-content">
+                <span class="custom-input-file"></span>
+                <input type="file" id="upload-img" name="avatar" accept="image/png, image/jpeg" class="input-file">
+                <p class="upload-instruction">Drag and drop or click to upload</p>
+              </label>
+
+              <div class="upload-preview">
+                <img src="assets/images/image-avatar.jpg" alt="avatar" class="preview-img" draggable="false">
+                <div class="preview-actions">
+                  <button type="button" class="btn-remove-img">Remove image</button>
+                  <button type="button" class="btn-change-img">Change image</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="upload-instructions">
+              <p class="upload-note">Upload your photo (JPG or PNG, max size: 500KB).</p>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="full-name" class="form-label">Full Name</label>
+            <input type="text" name="full-name" id="full-name" class="form-input">
+          </div>
+
+          <div class="form-group">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="text" name="email" id="email" class="form-input" placeholder="example@email.com">
+
+            <div class="email-error-msg">
+              <p class="email-msg">Please enter a valid email address.</p>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="github-username" class="form-label">GitHub Username</label>
+            <input type="text" name="github-username" id="github-username" class="form-input"
+              placeholder="@yourusername">
+          </div>
+
+          <button type="submit" class="submit-btn">Generate My Ticket</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Generated tickets starts -->
+    <section class="generated-ticket-section">
+      <div class="ticket-container">
+        <h2 class="ticket-heading">Congrats, <span class="user-name">Jonatan Kristof</span>! Your ticket is ready.</h2>
+        <p class="ticket-subheading">We've emailed your ticket to <span class="user-email">email@example.com</span> and
+          will send updates in the run up to the event.</p>
+
+        <article class="ticket">
+          <img src="assets/images/pattern-ticket.svg" alt="pattern-ticket" class="ticket-pattern" draggable="false">
+
+          <div class="ticket-header">
+            <img src="assets/images/logo-mark.svg" alt="Coding Conf Logo" class="ticket-logo" draggable="false">
+            <div class="ticket-info">
+              <h3 class="conference-name">Coding Conf</h3>
+              <p class="conference-date">May 31, 2025 / Austin, TX</p>
+            </div>
+          </div>
+
+          <div class="ticket-user">
+            <img src="assets/images/image-avatar.jpg" alt="User Avatar" class="user-avatar" draggable="false">
+            <div class="user-info">
+              <h3 class="user-fullname">Jonatan Kristof</h3>
+              <div class="github-username">
+                <p class="github-handle">@jonatankristof0101</p>
+              </div>
+            </div>
+          </div>
+
+          <p class="ticket-id">#01609</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="https://github.com/arisdwii">arisdwii</a>.
+    </p>
+  </footer>
+</body>
+
+</html>
