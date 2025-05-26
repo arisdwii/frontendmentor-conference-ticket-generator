@@ -124,6 +124,12 @@ main {
   justify-content: center;
   overflow: hidden;
   transition: 0.2s;
+  outline: 2px solid transparent;
+  outline-offset: 4px;
+}
+
+.upload-box:focus-within {
+  outline-color: var(--color-neutral-700);
 }
 
 .upload-box:hover,
@@ -225,7 +231,8 @@ main {
   color: var(--color-neutral-0);
   border: 2px solid var(--color-neutral-700);
   border-radius: 0.5rem;
-  outline: none;
+  outline: 2px solid transparent;
+  outline-offset: 4px;
   cursor: pointer;
   transition: 0.2s;
 }
@@ -236,6 +243,10 @@ main {
 
 .form-input:hover {
   background-color: hsla(245, 19%, 35%, 0.6);
+}
+
+.form-input:focus {
+  outline-color: var(--color-neutral-700);
 }
 
 .form-input::placeholder {
@@ -292,10 +303,12 @@ main {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   color: inherit;
+  text-transform: capitalize;
 }
 
 .user-email {
   color: var(--color-orange-500);
+  text-transform: lowercase;
 }
 
 .ticket {

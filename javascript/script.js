@@ -17,6 +17,8 @@ const emailMsg = document.querySelector(".email-msg");
 const generatedTicketSection = document.querySelector(
   ".generated-ticket-section"
 );
+const userName = document.querySelector(".user-name");
+const userEmail = document.querySelector(".user-email");
 const userFullName = document.querySelector(".user-fullname");
 const githubHandle = document.querySelector(".github-handle");
 const ticketId = document.querySelector(".ticket-id");
@@ -45,6 +47,9 @@ ticketForm.addEventListener("submit", (e) => {
   // Hide form and show ticket section
   heroSection.style.display = "none";
   generatedTicketSection.style.display = "block";
+
+  userName.textContent = inputFullName.value;
+  userEmail.textContent = inputEmail.value;
 
   // Populate ticket content with user input
   userFullName.textContent = inputFullName.value.trim();
